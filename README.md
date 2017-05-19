@@ -1,0 +1,2 @@
+# pocHibernateEntityMgr
+just another PoC
