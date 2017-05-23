@@ -19,9 +19,10 @@ public class ClientDAO {
 		session.close();
 	}
 	
+	@SuppressWarnings("unchecked")
 	public List<Client> getClients(){
 		Session session = SessionUtil.getSession();
-		Query query = session.createQuery("from clients");
+		Query query = session.createQuery("from Client");
 		List<Client> clients = query.list();
 		session.close();
 		
@@ -31,9 +32,9 @@ public class ClientDAO {
 	public int deleteClient(String id){
 		Session session = SessionUtil.getSession();
 		Transaction tx = session.beginTransaction();
-		String hql = "delete from Clients where idclient = :id";
+		String hql = "delete from Client where idClient = :id";
 		Query query =session.createQuery(hql);
-		query.setParameter("idclient", id);
+		query.setParameter("id", id);
 		int rowCount = query.executeUpdate();
 		System.out.println("Affected rows: "+rowCount);
 		tx.commit();
@@ -42,12 +43,12 @@ public class ClientDAO {
 		return rowCount;
 	}
 	
-	public int updateClient(int id, Client cl){
+	public int updateClient(String id, Client cl){
 		Session session = SessionUtil.getSession();
 		Transaction tx = session.beginTransaction();
-		String hql = "update Clients set fname= :fname, lname=:lname, age=:age where idclient = :id";
+		String hql = "update Client set fname= :fname, lname=:lname, age=:age where idclient = :id";
 		Query query =session.createQuery(hql);
-		query.setParameter("idclient", id);
+		query.setParameter("id", id);
 		query.setParameter("fname", cl.getFname());
 		query.setParameter("lname", cl.getLname());
 		query.setParameter("age", cl.getAge());

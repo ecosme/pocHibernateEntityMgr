@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="clients")
+@Table(name="clients", schema="public")
 public class Client {
 
 	@Id
@@ -20,6 +20,9 @@ public class Client {
 	private int age;
 	
 	
+	public Client(){
+		super();
+	}
 	
 	public Client(String idclient, String fname, String lname, int age) {
 		super();
