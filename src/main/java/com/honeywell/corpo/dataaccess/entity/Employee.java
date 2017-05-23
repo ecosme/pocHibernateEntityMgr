@@ -27,15 +27,9 @@ public class Employee {
 	private LocalUser flocalUser;
 	
 	
-	public Employee(){
-		LocalUser lu = new LocalUser(100, "John", "Doe");
-		this.flocalUser = lu;
-		this.address = "Dummy Address";
-		this.ssn = "DummySocial";
-	}
-	public Employee(int idEmployee, String ssn, String address) {
+	
+	public Employee(String ssn, String address) {
 		super();
-		this.idEmployee = idEmployee;
 		this.ssn = ssn;
 		this.address = address;
 	}

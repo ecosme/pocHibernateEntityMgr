@@ -1,0 +1,15 @@
+config
+description
+HEAD
+hooks/applypatch-msg.sample
+hooks/commit-msg.sample
+hooks/post-update.sample
+hooks/pre-applypatch.sample
+hooks/pre-commit.sample
+hooks/prepare-commit-msg.sample
+hooks/pre-push.sample
+hooks/pre-rebase.sample
+hooks/pre-receive.sample
+hooks/update.sample
+info/exclude
+.settings/org.eclipse.m2e.core.prefs

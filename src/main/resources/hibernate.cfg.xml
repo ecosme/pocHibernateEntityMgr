@@ -4,33 +4,18 @@
 
 <hibernate-configuration>
    <session-factory>
-   <property name="hibernate.dialect">
-      org.hibernate.dialect.PostgreSQLDialect
-   </property>
-   <property name="hibernate.connection.driver_class">
-   	  org.postgresql.Driver
-   </property>
+   <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+   <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
 
    <!-- Assume corpoDB is the database name -->
-   <property name="hibernate.connection.url">
-      jdbc:postgresql://localhost:5432/corpoDB
-   </property>
-   <property name="hibernate.connection.username">
-      normalUser
-   </property>
-   <property name="hibernate.connection.password">
-      Bonafont
-   </property>
-   <property name="show_sql">
-      true
-   </property>
-   <property name="format_sql">
-      true
-   </property>	
-   <property name="hbm2ddl.auto">
-      update
-   </property>
-   <mapping class="com.honeywell.corpo.dataaccess.entity.LocalUser"/>
-   <mapping class="com.honeywell.corpo.dataaccess.entity.Employee"/>
+   <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/corpoDB</property>
+   <property name="hibernate.connection.username">normalUser</property>
+   <property name="hibernate.connection.password">Bonafont</property>
+   <property name="show_sql">true</property>
+   <property name="format_sql">true</property>	
+   <property name="use_sql_comments">true</property>
+   <property name="hbm2ddl.auto">update</property>
+
+   <mapping class="com.honeywell.corpo.dataaccess.entity.Client"/>
 </session-factory>
 </hibernate-configuration>

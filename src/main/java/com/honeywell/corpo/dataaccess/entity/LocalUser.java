@@ -4,16 +4,17 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import static javax.persistence.GenerationType.IDENTITY;
+import static javax.persistence.GenerationType.SEQUENCE;
 
 @Entity
 @Table(name= "localUsers")
 public class LocalUser {
 
 		@Id
-		@GeneratedValue(strategy = IDENTITY)
-		@Column(unique=true, nullable= false)
+		@SequenceGenerator(name="localUsers_idLocalUser_seq", sequenceName="localUsers_idLocalUser_seq", allocationSize=1)
+		@GeneratedValue(strategy = SEQUENCE, generator="localUsers_idLocalUser_seq")
 		private int idLocalUser;
 		@Column(nullable= false)
 		private String fname;
