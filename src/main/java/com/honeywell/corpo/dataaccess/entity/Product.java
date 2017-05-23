@@ -1,9 +1,8 @@
 package com.honeywell.corpo.dataaccess.entity;
 
 
-import static javax.persistence.GenerationType.TABLE;
+import static javax.persistence.GenerationType.IDENTITY;
 
-import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,18 +17,17 @@ import javax.persistence.TableGenerator;
 public class Product {
 	
 	@Id
-	@GeneratedValue(strategy=TABLE, generator="prodGen")
+	@GeneratedValue(strategy=IDENTITY, generator="prodGen")
 	@Column(name="idProd", unique=true, nullable = false)
 	private int idProd;
 	@Column(nullable = false)
 	private String description;
 	
 	public Product(){
-		
-		this.description = "";
+		super();
 	}
 	public Product(String prodName){
-		//super();
+		super();
 		this.description = prodName;
 	}
 	

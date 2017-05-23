@@ -17,5 +17,6 @@
    <property name="hbm2ddl.auto">update</property>
 
    <mapping class="com.honeywell.corpo.dataaccess.entity.Client"/>
+   <mapping class="com.honeywell.corpo.dataaccess.entity.Product"/>
 </session-factory>
 </hibernate-configuration>
