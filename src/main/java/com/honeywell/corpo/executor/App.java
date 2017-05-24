@@ -4,13 +4,20 @@ import java.util.List;
 
 import com.honeywell.corpo.dataacces.accesor.ClientDAO;
 import com.honeywell.corpo.dataacces.accesor.ProductDAO;
+import com.honeywell.corpo.dataacces.accesor.StoreDAO;
 import com.honeywell.corpo.dataaccess.entity.Client;
 import com.honeywell.corpo.dataaccess.entity.Product;
+import com.honeywell.corpo.dataaccess.entity.Store;
 
 public class App {
 
 	public static void main(String[] args) {
 
+		Store st = new Store("Second Ave. 6262",9,12, 122);
+		StoreDAO sdao = new StoreDAO();
+		sdao.addStore(st);
+		
+		/*
 		ProductDAO pdao = new ProductDAO();
 		Product pr = new Product("Chanclas innovadoras");
 		pdao.addProduct(pr);
@@ -19,7 +26,7 @@ public class App {
 		pr = new Product("Second hand notebook");
 		pdao.addProduct(pr);
 		
-		/*
+		
 		ClientDAO cdao = new ClientDAO();
 		//Good insertion code
 		 
