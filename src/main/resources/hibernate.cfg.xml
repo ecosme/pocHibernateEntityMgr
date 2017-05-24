@@ -20,6 +20,5 @@
 	<mapping class="com.honeywell.corpo.dataaccess.entity.Store"/>
    	<mapping class="com.honeywell.corpo.dataaccess.entity.Client"/>
    	<mapping class="com.honeywell.corpo.dataaccess.entity.Product"/>
-   	<mapping class="com.honeywell.corpo.dataaccess.entity.SequenceIdentifier"/>
 </session-factory>
 </hibernate-configuration>
