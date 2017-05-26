@@ -73,7 +73,9 @@ public class Equipment {
 		this.employee = employee;
 	}
 	
-	
+	public String toString(){
+		return this.getIdEquipment() + " " + this.description + " " ;
+	}
 	
 	
 	

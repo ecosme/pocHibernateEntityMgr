@@ -13,3 +13,5 @@ hooks/pre-receive.sample
 hooks/update.sample
 info/exclude
 .settings/org.eclipse.m2e.core.prefs
+target/classes/com/honeywell/corpo/dataacces/accesor/EquipmentDAO.class
+target/classes/com/honeywell/corpo/dataaccess/entity/Equipment.class

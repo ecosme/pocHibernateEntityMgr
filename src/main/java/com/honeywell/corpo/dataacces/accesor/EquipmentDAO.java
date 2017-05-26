@@ -19,12 +19,46 @@ public class EquipmentDAO {
 		session.close();
 	}
 	
-	public List<Equipment> getEquiments(){
+	public List<Equipment> getEquipments(){
+		return getEquipments(0,0);
+		
+	}
+	
+	public List<Equipment> getEquipments(int firstRecs, int maxRecs){
 		Session session = SessionUtil.getSession();
-		Query query = session.createQuery("from Equipment");
+		Query query = session.createQuery("from Equipment e order by e.description");
+		if ((firstRecs > 0) && (maxRecs > 0)){
+			query.setFirstResult(firstRecs);
+			query.setMaxResults(maxRecs);
+		}
 		List<Equipment> eqs = query.list();
 		session.close();
 		return eqs;
+	}
+	
+	public Number getEquipmentPrices(String category){
+		Session session = SessionUtil.getSession();
+		String criteria="";
+		switch (category.toLowerCase()){
+			case "avg":
+				criteria = "select avg(e.currentPrice) ";
+				break;
+			case "count":
+				criteria = "select count(1) ";
+				break;
+			case "max":
+				criteria = "select max(e.currentPrice) ";
+				break;
+			case "min":
+				criteria = "select min(e.currentPrice) ";
+				break;
+			case "sum":
+				criteria = "select sum(e.currentPrice) ";
+				break;
+		}
+		Query query = session.createQuery(criteria + " from Equipment e");
+		
+		return (Number) query.uniqueResult();
 	}
 	
 	public int deleteEquipment(int ideq){

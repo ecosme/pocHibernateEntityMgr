@@ -18,7 +18,32 @@ public class App {
 
 	public static void main(String[] args) {
 
+		
 		/*
+		//Getting info from equipment using scalar functions and hql
+		EquipmentDAO eqdao = new EquipmentDAO();
+		Number res=eqdao.getEquipmentPrices("avg");
+		System.out.println("Equipment average: "+res);
+		res=eqdao.getEquipmentPrices("max");
+		System.out.println("Equipment max price: "+res);
+		res=eqdao.getEquipmentPrices("count");
+		System.out.println("Equipments availables: "+res);
+		
+		 
+		//Getting info from equipment
+		EquipmentDAO eqdao = new EquipmentDAO();
+		List<Equipment> eqLst = eqdao.getEquipments();
+		System.out.println("Listing all available equipments...");
+		for (Equipment eqq : eqLst){
+			System.out.println(eqq);
+		}
+		
+		eqLst = eqdao.getEquipments(2,4);
+		System.out.println("-----\nListing from second to fourth available equipments...");
+		for (Equipment eqq : eqLst){
+			System.out.println(eqq);
+		}
+		
 		//OneToMany Insertion 
 		
 		Equipment eqNw = new Equipment("Air pilot equipment", 2322.12);
