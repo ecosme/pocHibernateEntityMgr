@@ -20,5 +20,7 @@
 	<mapping class="com.honeywell.corpo.dataaccess.entity.Store"/>
    	<mapping class="com.honeywell.corpo.dataaccess.entity.Client"/>
    	<mapping class="com.honeywell.corpo.dataaccess.entity.Product"/>
+   	<mapping class="com.honeywell.corpo.dataaccess.entity.Equipment"/>
+   	<mapping class="com.honeywell.corpo.dataaccess.entity.Employee"/>
 </session-factory>
 </hibernate-configuration>

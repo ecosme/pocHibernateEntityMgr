@@ -3,7 +3,6 @@ package com.honeywell.corpo.dataacces.accesor;
 
 import java.util.List;
 
-import org.hibernate.FlushMode;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;

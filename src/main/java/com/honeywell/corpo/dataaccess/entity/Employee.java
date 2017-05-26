@@ -1,53 +1,70 @@
 package com.honeywell.corpo.dataaccess.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import static javax.persistence.GenerationType.IDENTITY;
+import javax.persistence.GenerationType;
 
-import javax.persistence.CascadeType;
+
 
 @Entity
-@Table(name="Employees")
+@Table(name="employee", schema="public")
 public class Employee {
 	
 	
 	@Id
-	@GeneratedValue(strategy=IDENTITY)
+	@GeneratedValue(strategy= GenerationType.SEQUENCE, generator="employee_idemployee_seq")
+	@SequenceGenerator(name="employee_idemployee_seq", sequenceName="employee_idemployee_seq", allocationSize=1)
 	@Column(unique=true, nullable=false)
-	private int idEmployee;
-	@Column(nullable = false)
+	private int idemployee;
+	@Column(nullable= false)
+	private String fName;
+	@Column(nullable= false)
+	private String lName;
+	@Column(nullable = true)
 	private String ssn;
-	@Column(nullable = false)
+	@Column(nullable = true)
 	private String address;
-	@OneToOne(cascade = CascadeType.ALL)
-	private LocalUser flocalUser;
+	@Column(nullable = true)
+	private String position;
+	@OneToMany(orphanRemoval=false, mappedBy="employee", cascade=CascadeType.ALL)
+	private List<Equipment> equipment = new ArrayList<>();
 	
 	
-	
-	public Employee(String ssn, String address) {
+	public Employee(){
 		super();
+	}
+	
+	public Employee(String fname, String lname, String ssn, String address) {
+		super();
+		this.fName = fname;
+		this.lName = lname;
 		this.ssn = ssn;
 		this.address = address;
 	}
 	
-	
-	public LocalUser getFlocalUser() {
-		return flocalUser;
-	}
-	public void setFlocalUser(LocalUser flocalUser) {
-		this.flocalUser = flocalUser;
+	public Employee(String fname, String lname, String ssn, String address, List<Equipment> eqs) {
+		this(fname, lname, ssn, address);
+		this.equipment = eqs;
 	}
 	
-	public int getIdEmployee() {
-		return idEmployee;
+	
+	public int getIdemployee() {
+		return idemployee;
 	}
-	public void setIdEmployee(int idEmployee) {
-		this.idEmployee = idEmployee;
+
+	public void setIdemployee(int idemployee) {
+		this.idemployee = idemployee;
 	}
+
 	public String getSsn() {
 		return ssn;
 	}
@@ -60,6 +77,39 @@ public class Employee {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
+
+	public String getfName() {
+		return fName;
+	}
+
+	public void setfName(String fName) {
+		this.fName = fName;
+	}
+
+	public String getlName() {
+		return lName;
+	}
+
+	public void setlName(String lName) {
+		this.lName = lName;
+	}
+
+	public String getPosition() {
+		return position;
+	}
+
+	public void setPosition(String position) {
+		this.position = position;
+	}
+
+	public List<Equipment> getEquipment() {
+		return equipment;
+	}
+
+	public void setEquipment(List<Equipment> equipment) {
+		this.equipment = equipment;
+	}
+
+		
 	
 }
