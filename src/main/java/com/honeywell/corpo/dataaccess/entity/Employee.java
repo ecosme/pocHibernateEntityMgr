@@ -36,7 +36,7 @@ public class Employee {
 	@Column(nullable = true)
 	private String position;
 	@OneToMany(orphanRemoval=false, mappedBy="employee", cascade=CascadeType.ALL)
-	private List<Equipment> equipment = new ArrayList<>();
+	private List<Equipment> equipment ;
 	
 	
 	public Employee(){

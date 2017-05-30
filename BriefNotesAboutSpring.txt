@@ -1,0 +1,24 @@
+Persistance Layers with Spring:
+	-Domain Model: Key entities within an app
+	-Data Access Object Layer
+	-Service Layer (Service Facade)
+Aspect Oriented Programming (AOP)
+	-Provides a proxy to the app classes
+Template Pattern
+	-Most common patterns, templates a serie of steps 
+	-Template class is defined as an abstract class (Hibernate Template or JpaTemplate)
+Bean Scopes:
+	-Singleton
+		single object instance per Spring IoC container (default scope)
+		has a static method
+		has a private constructor
+	-Prototype
+		Scopes a single bean to any number of object instances
+	-Request
+		Scopes a single bean definition to the lifecycle of a single HTTP request
+	-Session
+		scopes a single bean definition to the life cycle of an HTTP session
+	-Global session
+	-Simple Thread
+Ambiguity
+	Qualifier annotation eliminates ambiguity issue

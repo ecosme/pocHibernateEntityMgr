@@ -8,6 +8,7 @@ import org.hibernate.query.Query;
 
 import com.honeywell.corpo.dataaccess.entity.Employee;
 
+@Deprecated
 public class EmployeeDAO {
 
 	public void addEmployee(Employee emp){

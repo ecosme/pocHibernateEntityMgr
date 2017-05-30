@@ -9,6 +9,7 @@ import org.hibernate.Transaction;
 
 import com.honeywell.corpo.dataaccess.entity.Equipment;
 
+@Deprecated
 public class EquipmentDAO {
 
 	public void addEquipment(Equipment eq){
