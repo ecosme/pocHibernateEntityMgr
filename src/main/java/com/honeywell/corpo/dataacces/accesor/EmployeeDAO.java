@@ -6,7 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-import com.honeywell.corpo.dataaccess.entity.Employee;
+import com.honeywell.corpo.model.Employee;
 
 public class EmployeeDAO {
 

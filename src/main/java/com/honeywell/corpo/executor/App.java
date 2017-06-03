@@ -9,10 +9,10 @@ import com.honeywell.corpo.dataacces.accesor.EquipmentDAO;
 import com.honeywell.corpo.dataacces.accesor.ProductDAO;
 import com.honeywell.corpo.dataacces.accesor.StoreDAO;
 import com.honeywell.corpo.dataaccess.entity.Client;
-import com.honeywell.corpo.dataaccess.entity.Employee;
 import com.honeywell.corpo.dataaccess.entity.Equipment;
 import com.honeywell.corpo.dataaccess.entity.Product;
 import com.honeywell.corpo.dataaccess.entity.Store;
+import com.honeywell.corpo.model.Employee;
 
 public class App {
 

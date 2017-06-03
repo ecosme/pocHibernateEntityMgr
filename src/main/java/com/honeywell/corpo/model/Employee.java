@@ -1,4 +1,4 @@
-package com.honeywell.corpo.dataaccess.entity;
+package com.honeywell.corpo.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +11,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+
+import com.honeywell.corpo.dataaccess.entity.Equipment;
+
 import javax.persistence.GenerationType;
 
 
@@ -36,7 +39,7 @@ public class Employee {
 	@Column(nullable = true)
 	private String position;
 	@OneToMany(orphanRemoval=false, mappedBy="employee", cascade=CascadeType.ALL)
-	private List<Equipment> equipment = new ArrayList<>();
+	private List<Equipment> equipment = new ArrayList<Equipment>();
 	
 	
 	public Employee(){

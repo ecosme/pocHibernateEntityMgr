@@ -12,6 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import com.honeywell.corpo.model.Employee;
+
 @Entity
 @Table(name="equipment", schema="public")
 public class Equipment {
