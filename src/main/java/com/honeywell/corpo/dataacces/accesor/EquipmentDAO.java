@@ -2,14 +2,16 @@ package com.honeywell.corpo.dataacces.accesor;
 
 import org.hibernate.query.Query;
 
+import com.honeywell.corpo.dataaccess.entity.Equipment;
+
 import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import com.honeywell.corpo.dataaccess.entity.Equipment;
 
-@Deprecated
+
+
 public class EquipmentDAO {
 
 	public void addEquipment(Equipment eq){

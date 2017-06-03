@@ -5,10 +5,8 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
-
 import com.honeywell.corpo.dataaccess.entity.Employee;
 
-@Deprecated
 public class EmployeeDAO {
 
 	public void addEmployee(Employee emp){
@@ -48,7 +46,6 @@ public class EmployeeDAO {
 		query.setParameter("idem", idem);
 		query.setParameter("fName", emp.getfName());
 		query.setParameter("lName", emp.getlName());
-		query.setParameter("position", emp.getPosition());
 		int rowCount = query.executeUpdate();
 		System.out.println("Affected rows:"+rowCount);
 		tx.commit();
