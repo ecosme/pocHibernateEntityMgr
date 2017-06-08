@@ -6,8 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="vacationRequests")
+//@Entity
+//@Table(name="vacationRequests")
 public class vacationRequest {
 	private int idEmployee;
 	@Column(nullable = false)

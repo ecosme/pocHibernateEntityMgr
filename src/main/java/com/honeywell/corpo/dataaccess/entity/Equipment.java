@@ -14,8 +14,8 @@ import javax.persistence.Table;
 
 import com.honeywell.corpo.model.Employee;
 
-@Entity
-@Table(name="equipment", schema="public")
+//@Entity
+//@Table(name="equipment", schema="public")
 public class Equipment {
 
 	@Id

@@ -8,8 +8,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import static javax.persistence.GenerationType.SEQUENCE;
 
-@Entity
-@Table(name= "localUsers")
+//@Entity
+//@Table(name= "localUsers")
 public class LocalUser {
 
 		@Id

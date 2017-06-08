@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="companycar", schema="public")
+//@Entity
+//@Table(name="companycar", schema="public")
 public class CompanyCar {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="companycar_id_car_seq")

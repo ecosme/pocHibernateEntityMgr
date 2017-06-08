@@ -10,8 +10,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 
-@Entity
-@Table(name="store", schema="public")
+//@Entity
+//@Table(name="store", schema="public")
 public class Store {
 
 	@Id

@@ -11,9 +11,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 
-@Entity
-@Table(name="products", schema="public")
-@TableGenerator(name="prodGen", initialValue=0, allocationSize=10)
+//@Entity
+//@Table(name="products", schema="public")
+//@TableGenerator(name="prodGen", initialValue=0, allocationSize=10)
 public class Product {
 	
 	@Id
